@@ -5,6 +5,7 @@ The current implementation uses pilot-derived estimates of signal amplitude, spa
 
 This repository is being shared to support transparency and reproducibility for ongoing grant applications and associated work.
 
+**Note**: The current codebase reflects an active research workflow and is provided in its working form. Documentation, modularization, and generalization of the framework are in progress. A more fully structured and user-friendly version of this repository will be released in a future update.
 
 ## Data Availability
 
