@@ -1,4 +1,4 @@
-# neuro-power-sim
+# neuro-simulation-power
 A simulation-based framework for power analysis in neuroimaging studies using realistic signal and noise models derived from pilot data.
 
 The current implementation uses pilot-derived estimates of signal amplitude, spatial smoothness, and noise variance to generate realistic subject-level data. Simulated datasets are analyzed using the same statistical models and multiple-comparison correction procedures planned for the final study (e.g., FDR/FWE correction), enabling study-specific and model-consistent power estimation for complex neuroimaging designs.
