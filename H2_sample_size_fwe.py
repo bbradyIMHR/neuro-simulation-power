@@ -52,7 +52,6 @@ This script estimates whole-brain FWE control using an empirical null distributi
 of the maximum absolute t-statistic across the brain ("max-|t|").
 That is valid for FWE control and is practical for power simulations.
 
-It is NOT literally SPM's RFT/FWE threshold.
 """
 
 from __future__ import annotations
@@ -82,7 +81,7 @@ CONFIG = {
 
     # str
     # MATLAB v7.3 file containing all pilot subject maps in one masked matrix
-    "pilot_mat_path": "/Users/brendanbrady/Documents/Funding_Opportunities/2026_Advancing 2S:LGBTQI/power_calculations/H2/n39_additionalsubjects/Minoritystress_n39_subject_voxel_matrix.mat",
+    "pilot_mat_path": "path to .mat",
 
     # str
     # Dataset name inside the .mat file containing the masked voxel matrix
@@ -106,7 +105,7 @@ CONFIG = {
     # str
     # Path to a binary whole-brain mask NIfTI.
     # This MUST match the .mat mask exactly.
-    "brain_mask_path": "/Users/brendanbrady/Documents/Funding_Opportunities/2026_Advancing 2S:LGBTQI/power_calculations/H2/n39_additionalsubjects/Minoritystress_n39_wholesample_intersection_mask.nii",
+    "brain_mask_path": "path to .nii",
 
     # tuple/list of length 3 or None
     # The .mat mask needs axis reordering before comparison/use.
@@ -121,7 +120,7 @@ CONFIG = {
     # Optional CSV containing pilot clinical scores.
     # Must have columns:
     #   subject_id, clinical_score
-    "pilot_scores_csv": "/Users/brendanbrady/Documents/Funding_Opportunities/2026_Advancing 2S:LGBTQI/power_calculations/H2/clinical_scores.csv",
+    "pilot_scores_csv": "path to .csv",
 
     # -------------------------------------------------------------------------
     # SIMULATION DESIGN
@@ -205,12 +204,12 @@ CONFIG = {
     "signal_smoothing_sigma_vox": 1.0,
 
     # float
-    # Fixed slope amplitude to inject if not estimating from pilot ROI.
+    # Fixed slope amplitude to inject. Reverse engineer to get power = .80
     "fixed_beta_amplitude": 0.55,
-    # CORRESPONDING r = beta/voxelwiseSD = beta/2 = 0.21
-    #beta = r * SD_Y/SD_X
+    # CORRESPONDING r = beta/voxelwiseSD = beta/2.25 = 0.24
+    # beta = r * SD_Y/SD_X
     # SD_X = SD of predictor (i.e., clinical score) - these are standardized, thus SD_X = 1
-    # SD_Y = SD of activation of the same voxel across subjs = 2 (mean) or 1.8 (median)
+    # SD_Y = SD of activation of the same voxel across subjs = 2.25
 
     # bool
     # If True:
