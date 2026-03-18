@@ -1,7 +1,7 @@
 """
 Pilot-informed simulation of subject-level fMRI contrast maps
 for a TWO-GROUP design (EG vs CG), with whole-brain voxelwise
-FDR correction and a post-threshold cluster extent filter.
+FWE correction and a post-threshold cluster extent filter.
 
 STUDY LOGIC BEING SIMULATED
 ---------------------------
@@ -19,7 +19,7 @@ Then, at the second level, we test:
 
 using:
     1. voxelwise EG vs CG two-sample t-test across all voxels in the brain mask
-    2. Benjamini-Hochberg FDR correction across all voxels in the brain mask
+    2. FWE correction across all voxels in the brain mask
     3. cluster extent threshold k >= 10
     4. detection criterion = any surviving cluster overlaps the injected-signal ROI
 
