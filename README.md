@@ -5,4 +5,7 @@ The current implementation uses pilot-derived estimates of signal amplitude, spa
 
 This repository is being shared to support transparency and reproducibility for ongoing grant applications and associated work.
 
-**Note**: The current codebase reflects an active research workflow and is provided in its working form for transparency. Ongoing development will focus on improved documentation, modularization, and generalization to support broader use.
+
+## Data Availability
+
+Due to the use of sensitive neuroimaging data, raw datasets are not included in this repository. The simulation framework can be run using user-supplied data or synthetic inputs.
